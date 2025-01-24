@@ -8,9 +8,9 @@
 
 /* TODO: Add your structures here */ 
 typedef struct {
-    char* name;      // Full name (dynamically allocated)
+    char* name;      // Full name
     int age;         // Age
-    char* phone;     // Phone number (dynamically allocated)
+    char* phone;     // Phone number
 } Person;
 
 /* Structure to represent the address book */
