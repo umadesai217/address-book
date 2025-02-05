@@ -1,14 +1,18 @@
+#include <stdio.h>
 #include "address_book.h"
 
 int main() {
-    // Create an address book from user input
-    Address_book* my_book = create_address_book();
-    
-    // Print the address book
-    print_address_book(my_book);
+    Address_book*book = create_address_book(); // Create address book
 
-    // Free allocated memory
-    destroy_address_book(my_book);
+    if (book == NULL) {
+        printf("Failed to create address book.\n");
+        return 1; // Returns an error code if the book creation fails
+    }
+
+    print_address_book(book); // Prints contents
+
+    // Frees memory
+    destroy_address_book(book);
 
     return 0;
 }
