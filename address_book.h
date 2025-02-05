@@ -1,24 +1,19 @@
-
 #ifndef __ADDRESS_BOOK_H__
 #define __ADDRESS_BOOK_H__
-
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-
 /* TODO: Add your structures here */ 
-typedef struct {
-    char* name;      // Full name
-    int age;         // Age
-    char* phone;     // Phone number
+//person
+typedef struct Person {
+	char name[100];
+	int age;
+	char phoneNumber[20];
 } Person;
 
-/* Structure to represent the address book */
-typedef struct {
-    Person* persons;  
-    size_t size;      
+//address book
+typedef struct Address_book {
+	struct Person *persons;
+	size_t size;
 } Address_book;
-
+	
 /* Function declarations. Do not modify! Implement those functions in address_book.c */
 void print_person(const Person* person);
 void print_address_book(const Address_book* address_book);
